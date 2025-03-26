@@ -24,7 +24,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         with open("tayyor RUYA.png", "rb") as photo:
             await update.message.reply_photo(
                 photo=photo,
-                caption="Ruya Vision Media — bu yurakka yetib boradigan kontentlar yaratadigan ijodkorlar jamoasi."
+                caption= "🎯 Ruya Vision — bu zamonaviy brendlar uchun media yechimlar markazi.\n"
+                "🎥 Mobilografiya | 🎨 Grafik dizayn | 🎯 Target reklama | 📱 SMM — barchasi bizda!\n"
+                "📌 Har bir loyiha — puxta strategiya, ijodiy yondashuv va sifatli ijro.\n"
+                "🚀 Brendingizni yaratish, rivojlantirish va to‘g‘ri auditoriyaga yetkazishda bizga ishonishingiz mumkin."
             )
     elif text == "🛠 Xizmatlarimiz":
         await update.message.reply_text ("• Mobilografiya\n• Grafik dizayn\n• Target reklama\n• SMM xizmatlari\n")
