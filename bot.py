@@ -14,7 +14,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [KeyboardButton("📄 Price List"), KeyboardButton("📱 Aloqa")]
     ]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-    await update.message.reply_text("Xush kelibsiz, tanlang:", reply_markup=reply_markup)
+    await update.message.reply_text("Xush kelibsiz, tanlang!", reply_markup=reply_markup)
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
@@ -37,7 +37,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Biz bilan bog‘lanish:", reply_markup=reply_markup)
     elif text == "📝 Buyurtma berish":
         user_data[chat_id] = {}
-        await update.message.reply_text("Ismingizni kiriting:")
+        await update.message.reply_text("Familiya va ismingizni kiriting:")
         return
     elif chat_id in user_data and "name" not in user_data[chat_id]:
         user_data[chat_id]["name"] = text
@@ -53,7 +53,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         data = user_data[chat_id]
         data["date"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         save_to_sheet(data)
-        msg = f"Yangi buyurtma:"
+        msg = f"Yangi buyurtma berishingiz mumkin!"
         Ism: {data['name']}
         Xizmat: {data['service']}
         Tel: {data['phone']}
