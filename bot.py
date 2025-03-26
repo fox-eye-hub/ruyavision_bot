@@ -23,15 +23,15 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if text == "📌 Biz haqimizda":
         await update.message.reply_text("Ruya Vision Media — bu yurakka yetib boradigan kontentlar yaratadigan ijodkorlar jamoasi.")
     elif text == "🛠 Xizmatlarimiz":
-        await update.message.reply_text ("• Mobilografiya\n • Grafik dizayn\n • Target reklama\n • SMM xizmatlari\n")
+        await update.message.reply_text ("• Mobilografiya\n• Grafik dizayn\n• Target reklama\n• SMM xizmatlari\n")
     elif text == "💬 Maslahat":
-        await update.message.reply_text("Maslahat uchun bizga yozing: @ruyavisionuz")
+        await update.message.reply_text("Maslahat uchun bizga yozing: @ruyavisionadmin")
     elif text == "📄 Price List":
-        await update.message.reply_text("Narxlar bo‘yicha ma'lumot olish uchun @ruyavisionuz bilan bog‘laning.")
+        await update.message.reply_text("Narxlar bo‘yicha ma'lumot olish uchun @ruyavisionadmin bilan bog‘laning.")
     elif text == "📱 Aloqa":
         buttons = [
             [InlineKeyboardButton("Instagram", url="https://www.instagram.com/ruyavisionuz?igsh=MTF4MXp4ZDNiMHhi")],
-            [InlineKeyboardButton("Telegram", url="https://t.me/ruyavisionuz")]
+            [InlineKeyboardButton("Telegram", url="https://t.me/ruyavisionadmin")]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await update.message.reply_text("Biz bilan bog‘lanish:", reply_markup=reply_markup)
