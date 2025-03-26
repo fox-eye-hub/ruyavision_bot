@@ -21,7 +21,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat.id
 
     if text == "📌 Biz haqimizda":
-        await update.message.reply_text("Ruya Vision Media — bu yurakka yetib boradigan kontentlar yaratadigan ijodkorlar jamoasi.")
+        with open("about_us.jpg", "rb") as photo:
+            await update.message.reply_photo(
+                photo=photo,
+                caption="Ruya Vision Media — bu yurakka yetib boradigan kontentlar yaratadigan ijodkorlar jamoasi."
+            )
     elif text == "🛠 Xizmatlarimiz":
         await update.message.reply_text ("• Mobilografiya\n• Grafik dizayn\n• Target reklama\n• SMM xizmatlari\n")
     elif text == "💬 Maslahat":
